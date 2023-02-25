@@ -12,9 +12,9 @@ local this={
 		-- TppMissionList.locationPackTable entry. 
 
 	 locationMapParams={ -- These are the iDroid map parameters we'd find in /Assets/tpp/pack/mbdvc/mb_dvc_top_fpkd/Assets/tpp/ui/Script/mbdvc_map_location_parameter.lua
-		 stageSize=2048,
-		 scrollMaxLeftUpPosition=Vector3(-200,0,-395), -- These 2 define there area where the player can move the mouse while on Idroid / map 
-		 scrollMaxRightDownPosition=Vector3(400,0,204), -- Make it big, just in case
+		 stageSize=4096,
+		 scrollMaxLeftUpPosition=Vector3(-4000,0,-4000), -- These 2 define there area where the player can move the mouse while on Idroid / map 
+		 scrollMaxRightDownPosition=Vector3(4000,0,4000), -- Make it big, just in case
 		 highZoomScale=2, 
 		 middleZoomScale=1,
 		 lowZoomScale=0.75,
@@ -25,8 +25,8 @@ local this={
 
 		 -- MAP TEXTURES FOR MAP IDROID IMAGES
 		 -- You can add them on "Modfolder/Assets/tpp/ui/texture/map/expl"
-		-- heightMapTexturePath="/Assets/tpp/ui/texture/map/expl/afn0_iDroid_clp.ftex",
-		-- photoRealMapTexturePath="/Assets/tpp/ui/texture/map/expl/afn0_hill_sat_clp.ftex",
+		 heightMapTexturePath="/Assets/tpp/ui/texture/map/expl/afgh_height_clp.ftex",
+		 photoRealMapTexturePath="/Assets/tpp/ui/texture/map/expl/afgh_height_clp_alp.ftex",
 		-- uniqueTownTexturePath="/Assets/tpp/ui/texture/map/building_icon/mb_map_bild_icon_afgh_alp_clp.ftex",
 		-- commonTownTexturePath="/Assets/tpp/ui/texture/map/building_icon/mb_map_bild_icon_cmn_alp_clp.ftex",
 		 townParameter = {
