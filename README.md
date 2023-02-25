@@ -5,6 +5,6 @@ This is an example custom map for MGSV:TPP
 
 <br>
 --> ⚙️ Original copy of Metal Gear Solid V: The Phantom Pain <br>
---> 🐍 Snakebite<br>
+--> 🐍 <a url="https://www.nexusmods.com/metalgearsolidvtpp/mods/106">Snakebite</a><br>
 --> 󠁩󠁩♾️ Infinite Heaven<br>
---> 🪝 IHHook (optional but very.very usefull)<br>
+--> 🪝 IHHook<br>
