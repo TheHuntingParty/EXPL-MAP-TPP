@@ -23,15 +23,15 @@ select the expl.mgsv and follow the instalation steps <br>
 
 # 🔧Content🔧
 
---> 7 enemy soldiers, each one equiped with diferent guns
---> 1 working Landing Zone for helicopter
---> All pack_small files (all empty)
---> 1 comand post
---> 1 sniping point for quiet
---> 1 Russian Tank
---> 1 Russian Combat Car
---> Working Weather and Time
---> Map located on: Ocean
+--> 7 enemy soldiers, each one equiped with diferent guns<br>
+--> 1 working Landing Zone for helicopter<br>
+--> All pack_small files (all empty)<br>
+--> 1 comand post<br>
+--> 1 sniping point for quiet<br>
+--> 1 Russian Tank<br>
+--> 1 Russian Combat Car<br>
+--> Working Weather and Time<br>
+--> Map located on: Ocean<br>
 
 # Spcecial Thanks 
 --> Ventos<br>
