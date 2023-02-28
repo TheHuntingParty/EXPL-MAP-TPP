@@ -12,7 +12,13 @@ this.soldierDefine =
 {
 	base1_cp = 
 	{		
-		"base1_soldier01", 
+		"base1_soldier01",
+		"base1_soldier02",
+		"base1_soldier03",
+		"base1_soldier04",
+		"base1_soldier05",
+		"base1_soldier06",
+		"base1_soldier07", 
 
 	},	
 	nil
@@ -28,21 +34,39 @@ this.routeSets = {
 		sneak_day = {
 			groupA =
 			{ 
-				"oldfob_sol_0000_N",
+				"expl_sol_0000",
+				"expl_sol_0001",
+				"expl_sol_0002",
+				"expl_sol_0003",
+				"expl_sol_0004",
+				"expl_sol_0005",
+				"expl_sol_0006",
 			},			
 			
 		},
 		sneak_night= {
 			groupA =
 			{ 
-				"oldfob_sol_0000_N",
+				"expl_sol_0000",
+				"expl_sol_0001",
+				"expl_sol_0002",
+				"expl_sol_0003",
+				"expl_sol_0004",
+				"expl_sol_0005",
+				"expl_sol_0006",
 			},			
 			
 		},
 		caution = {
 			groupA =
 			{ 
-				"oldfob_sol_0000_N",
+				"expl_sol_0000",
+				"expl_sol_0001",
+				"expl_sol_0002",
+				"expl_sol_0003",
+				"expl_sol_0004",
+				"expl_sol_0005",
+				"expl_sol_0006",
 			},			
 			
 		},
@@ -64,21 +88,38 @@ this.RouteSetsAfter = {
 		sneak_day = {
 			groupA =
 			{ 
-				"oldfob_sol_0000_N",
+				"expl_sol_0000",
+				"expl_sol_0001",
+				"expl_sol_0002",
+				"expl_sol_0003",
+				"expl_sol_0004",
+				"expl_sol_0005",
+				"expl_sol_0006",
 			},			
 			
 		},
 		sneak_night= {
 			groupA =
 			{ 
-				"oldfob_sol_0000_N",
-			},			
+				"expl_sol_0000",
+				"expl_sol_0001",
+				"expl_sol_0002",
+				"expl_sol_0003",
+				"expl_sol_0004",
+				"expl_sol_0005",
+				"expl_sol_0006",
 			
-		},
+		}, },
 		caution = {
 			groupA =
 			{ 
-				"oldfob_sol_0000_N",
+				"expl_sol_0000",
+				"expl_sol_0001",
+				"expl_sol_0002",
+				"expl_sol_0003",
+				"expl_sol_0004",
+				"expl_sol_0005",
+				"expl_sol_0006",
 			},			
 			
 		},
@@ -87,6 +128,7 @@ this.RouteSetsAfter = {
 
 
 	nil
+
 }
 
 
@@ -106,15 +148,56 @@ this.combatSetting = {
 	nil
 }
 
--- "COMBAT_SPECIAL", "NVG", "STEALTH_SPECIAL", "FULTON_SPECIAL", "STRONG_NOTICE_TRANQ", "HOLDUP_SPECIAL", "STRONG_PATROL", "GUN_LIGHT",
+--Soldier Gear and atributes are defined in  this.soldierPowerSettings
+
+--Gear:
+--	SOFT_ARMOR - Regular Kevlar
+--	HELMET - adds helmet to the soldier
+--	QUEST_ARMOR - Heavy Armor
+-- 	NVG - Night Vision Headgear
+--  GAS_MASK - Gas Mask, Soldiers will be invunerable to sleeping / toxic gas
+--Params:
+--	STRONG_WEAPON
+--	STRONG_PATROL
+--	STRONG_NOTICE_TRANQ
+--	FULTON_LOW
+--	FULTON_HIGH
+--	FULTON_SPECIAL
+--	COMBAT_LOW
+--	COMBAT_HIGH
+--	COMBAT_SPECIAL
+--	STEALTH_LOW
+--	STEALTH_HIGH
+--	STEALTH_SPECIAL
+--	HOLDUP_LOW
+--	HOLDUP_HIGH
+--	HOLDUP_SPECIAL 
+--Weapons
+--	SNIPER
+--	SHIELD (Shield and SMG)
+--	MISSILE (Missile Launcher and SMG)
+--	MG (machine gun)
+--	SHOTGUN
+--	SMG
+--	GUN_LIGHT (assault rifle)
+
+-- EXAMPLE:  bas1_soldier01 = { "QUEST_ARMOR", "MISSILE", "COMBAT_SPECIAL",}, (this soldier will be equiped with an heavy
+--armour and missile launcher, it will also be very good at combat)
+
 this.soldierPowerSettings = {	
 	
-	bas1_soldier01 = { "SOFT_ARMOR", "MISSILE", "COMBAT_SPECIAL", "STEALTH_SPECIAL", "FULTON_SPECIAL", "STRONG_NOTICE_TRANQ", "HOLDUP_SPECIAL", "STRONG_PATROL", "GUN_LIGHT",},
+	base1_soldier01 = { "SOFT_ARMOR",  "SNIPER",},
+	base1_soldier02 = { "SOFT_ARMOR",  "SHIELD",},
+	base1_soldier03 = { "SOFT_ARMOR",  "MISSILE",},
+	base1_soldier04 = { "SOFT_ARMOR",  "MG",},
+	base1_soldier05 = { "SOFT_ARMOR",  "SHOTGUN",},
+	base1_soldier06 = { "SOFT_ARMOR",  "SMG",},
+	base1_soldier07 = { "SOFT_ARMOR",  "GUN_LIGHT",},
 	
 }
 
-this.vehicleDefine = { instanceCount = 2 }	
 
+-- TABLE TO CONTROL VEHICLES AND VEHICLES TYPES IN GAME	
 this.VEHICLE_SPAWN_LIST = {
 	{
 		id="Spawn",
@@ -131,21 +214,11 @@ this.VEHICLE_SPAWN_LIST = {
 	},	
 }
 
---this.SpawnVehicleOnInitialize = function()
-	
-	
---	local spawnList = {
---		{ id="Spawn", locator="veh_unsa000_0000", type=Vehicle.type.EASTERN_TRACKED_TANK,	index = 1 },
---		{ id="Spawn", locator="veh_unsa000_0001", type=Vehicle.type.EASTERN_TRACKED_TANK,	index = 2 },
---		
---	}
---	TppEnemy.SpawnVehicles( spawnList )
---end
-
 this.vehicleDefine = {
 	instanceCount	= #this.VEHICLE_SPAWN_LIST + 1,
 }
 
+--FUNCTION TO SPAWN THE VEHICLES (REQUIERES this.VEHICLE_SPAWN_LIST, this.vehicleDefine )
 this.SpawnVehicleOnInitialize = function()
 	TppEnemy.SpawnVehicles( this.VEHICLE_SPAWN_LIST )
 end
@@ -175,16 +248,15 @@ this.SetUpEnemy = function ()
 	
 	
 	
-	-- SHOTGUNS
-	--GameObject.SendCommand( GameObject.GetGameObjectId( "bas1_soldier01" ), { id = "SetEquipId", primary = TppEquip.EQP_WP_Com_sg_020_FL } )
-	--GameObject.SendCommand( GameObject.GetGameObjectId( "bas1_soldier02" ), { id = "SetEquipId", primary = TppEquip.EQP_WP_Com_sg_020_FL } )
-	--GameObject.SendCommand( GameObject.GetGameObjectId( "bas1_soldier03" ), { id = "SetEquipId", primary = TppEquip.EQP_WP_Com_sg_020_FL } )
-	--GameObject.SendCommand( GameObject.GetGameObjectId( "bas1_soldier04" ), { id = "SetEquipId", primary = TppEquip.EQP_WP_Com_sg_020_FL } )
+	-- ADD SHOTGUNS MANUALY TO SOLDIERS / WORKS WITH OTHER SPECIFIC WEAPONS 
+	--GameObject.SendCommand( GameObject.GetGameObjectId( "base1_soldier01" ), { id = "SetEquipId", primary = TppEquip.EQP_WP_Com_sg_020_FL } )
+	
 	
 
 
 	
 end
+--WEAPONS ADDED MANUALY MUST BE ADDED HERE TOO!
 
 this.OnLoad = function ()
 	TppEquip.RequestLoadToEquipMissionBlock( {	TppEquip.EQP_WP_Com_sg_020_FL, })
